@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import './App.css'
+import { UiCanvasPage } from "@/pages/ui-canvas";
 
 function App() {
 
   return (
     <>
-     test app rendering
+     <UiCanvasPage />
     </>
   )
 }
