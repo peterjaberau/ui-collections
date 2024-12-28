@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "strict": false, // Disables strict mode
+    "noImplicitAny": false, // Allow `any` implicitly
+    "skipLibCheck": true, // Skip type checks for node_modules
+    "allowJs": true, // Allow JavaScript files
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx"
+  },
+  "exclude": ["node_modules", "dist"]
+}
