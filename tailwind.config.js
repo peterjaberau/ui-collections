@@ -57,8 +57,9 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
+        sans: ["var(--font-geist-sans)", ...fontFamily.sans],
       },
+      fontWeight: 'semi-bold',
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

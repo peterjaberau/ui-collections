@@ -4,6 +4,8 @@
 
 @layer base {
     :root {
+        --font-geist-sans: 'Geist Sans', sans-serif;
+
         --background: 0 0% 100%;
         --foreground: 222.2 47.4% 11.2%;
 
@@ -80,4 +82,23 @@
                 "rlig" 1,
                 "calt" 1;
     }
+}
+
+@layer utilities {
+    .step {
+        counter-increment: step;
+    }
+
+    .step:before {
+        @apply absolute inline-flex h-9 w-9 items-center justify-center rounded-full border-4 border-background bg-muted text-center -indent-px font-mono text-base font-medium;
+        @apply ml-[-50px] mt-[-4px];
+        content: counter(step);
+    }
+
+    @media (max-width: 640px) {
+        .container {
+            @apply px-4;
+        }
+    }
+
 }
