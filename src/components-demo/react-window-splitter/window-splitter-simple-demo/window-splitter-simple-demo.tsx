@@ -1,17 +1,20 @@
 import * as React from "react";
 
 import {
-  ColorfulPanel, ColorfulPanelGroup, ColorfulPanelResizer
-} from '@/components-demo/react-window-splitter/common/ColorfulPanels'
+  ColorfulPanel, ColorfulPanelGroup, ColorfulPanelResizer } from
+    "@/plugins/react-window-splitter/colorful/ColorfulPanels";
 
 
 export const WindowSplitterSimpleDemo = () => {
   return (
-
-    <ColorfulPanelGroup className={"w-[600px] h-[400px]"}>
-      <ColorfulPanel min="130px" max="400px" />
-      <ColorfulPanelResizer />
-      <ColorfulPanel min="130px" />
+    <ColorfulPanelGroup
+      id="group"
+      className="w-full"
+      style={{ height: 450 }}
+    >
+      <ColorfulPanel color="green" min="130px" id="1" />
+      <ColorfulPanelResizer id="2" />
+      <ColorfulPanel color="red" min="130px" id="3" />
     </ColorfulPanelGroup>
   );
 }
