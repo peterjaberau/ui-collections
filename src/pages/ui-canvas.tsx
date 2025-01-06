@@ -1,27 +1,48 @@
-import * as React from "react";
-import { CanvasButton } from "@/components/ui-canvas/canvas-button";
-import { CanvasButtonDemo } from "@/components-demo/ui-canvas/canvas-button/canvas-button-demo";
-import { ColorPaletteDemo } from "@/components-demo/ui-canvas/color-palette/color-palette-demo";
-import { Box } from "@/components/Box";
+import * as React from 'react'
+import ShowCasesTabView from '@/views/showcases-tabview'
+import { Button, Typography } from 'antd'
+const { Title } = Typography
+
+
+import AntdDemos from '@/components-demo/antd'
+import UiCanvasDemos from '@/components-demo/ui-canvas'
+import ReactWindowSplitterDemo from '@/components-demo/react-window-splitter'
+
+
+
 
 export const UiCanvasPage = () => {
-    return (
-        <div className="space-y-8">
-            <div className="flex justify-center space-x-8">
-                <Box title="Canvas Button">
-                    <CanvasButton>Click me</CanvasButton>
-                </Box>
+  const [currentDemo, setCurrentDemo] = React.useState('react-window-splitter')
 
-                <Box title="Canvas Button Demo">
-                    <CanvasButtonDemo />
-                </Box>
-            </div>
+  return (
+    <div className="space-y-8">
+      <div className="flex justify-center space-x-8">
+        <Button onClick={() => setCurrentDemo('react-window-splitter')}>
+          Demo from React Window Splitter
+        </Button>
 
-            <div className="flex justify-center space-x-8">
-                <Box title="Color Palette Demo">
-                    <ColorPaletteDemo />
-                </Box>
-            </div>
-        </div>
-    );
-};
+        <Button onClick={() => setCurrentDemo('ui-canvas')}>
+          Demo from UiCanvas
+        </Button>
+        <Button onClick={() => setCurrentDemo('antd')}>
+          Demo from Antd
+        </Button>
+
+
+
+
+      </div>
+
+      <div className="flex justify-center space-x-8">
+        <Title level={2}>{currentDemo}</Title>
+      </div>
+
+      <div className="flex justify-center space-x-8">
+        {currentDemo === 'antd' && <AntdDemos />}
+        {currentDemo === 'ui-canvas' && <UiCanvasDemos />}
+        {currentDemo === 'react-window-splitter' && <ReactWindowSplitterDemo />}
+
+      </div>
+    </div>
+  )
+}

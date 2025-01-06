@@ -9,4 +9,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'), // Ensure this is set correctly
     },
   },
+  define: {
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+  },
 });

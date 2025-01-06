@@ -1,7 +1,9 @@
-import { useState } from "react";
-import { SketchInput } from "@/components/ui-canvas/sketch-input";
+import * as React from "react";
+import {useState} from "react";
+import {SketchInput} from "@/components/ui-canvas/sketch-input";
 
-export function SketchInputDemo() {
+
+export const SketchInputDemo = () => {
     const [value1, setValue1] = useState("");
     const [value2, setValue2] = useState("");
     const [value3, setValue3] = useState("");

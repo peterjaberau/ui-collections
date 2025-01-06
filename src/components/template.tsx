@@ -1,7 +1,6 @@
 import * as React from "react";
 
-
-export const Template = () => {
+const Template = () => {
 
 
 
@@ -14,3 +13,4 @@ export const Template = () => {
     )
 
 }
+
