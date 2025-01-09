@@ -1,11 +1,12 @@
 module.exports = {
     ignores: ['node_modules', 'dist', 'build'],
     parser: '@typescript-eslint/parser',
-    plugins: ['@typescript-eslint'],
+    plugins: ['@typescript-eslint', 'tailwindcss'],
     extends: [
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
         'prettier',
+        'plugin:tailwindcss/recommended'
     ],
     rules: {
         '@typescript-eslint/no-explicit-any': 'off',
