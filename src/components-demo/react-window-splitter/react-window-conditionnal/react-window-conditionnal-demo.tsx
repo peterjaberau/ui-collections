@@ -10,14 +10,14 @@ export function ReactWindowConditionnalDemo() {
     const [isThirdPanelRendered, setIsThirdPanelRendered] = useState(false);
 
     return (
-        <div className="flex flex-col gap-6 ">
+        <div className="flex flex-col gap-6">
             <Button
-                className="self-start"
                 onClick={() => setIsThirdPanelRendered(!isThirdPanelRendered)}
             >
                 {isThirdPanelRendered ? "Hide" : "Show"} extra panel
             </Button>
-            <ColorfulPanelGroup style={{ height: 200 }}>
+
+          <ColorfulPanelGroup className={"grow"}>
                 <ColorfulPanel id="panel-1" color="green" min="100px">
                     1
                 </ColorfulPanel>

@@ -8,33 +8,35 @@ import { Button } from 'antd'
 
 export const HtmlSplitterDemo = () => {
   return (
-    <ColorfulPanelGroup orientation="vertical" id="group" className="w-full"
-      style={{ height: 450 }}>
-      <ColorfulPanel color="green"  id="1" min="10%" ></ColorfulPanel>
-      <ColorfulPanelResizer id="resizer-1"/>
-      <ColorfulPanel color="red" min="130px" id="3" > </ColorfulPanel>
-      <ColorfulPanelResizer id="resizer-2" />
-      <ColorfulPanelGroup orientation="horizontal" id="group" className="w-full"
-        style={{ height: 450 }}>
-        <ColorfulPanel color="blue" min="130px" id="5" >  </ColorfulPanel>
-        <ColorfulPanelResizer id="resizer-3" />
-        <ColorfulPanel color="orange" min="130px" id="7" > </ColorfulPanel>
-      </ColorfulPanelGroup>
+    <ColorfulPanelGroup orientation="vertical" id="gr-level-0" className={"!h-[600px]"} >
 
+      <ColorfulPanel color="green" id="panel1-level0">A</ColorfulPanel>
+
+      <ColorfulPanelResizer id="resizer1-level0" />
+
+      <ColorfulPanel color="red" id="panel2-level0">
+        B
+      </ColorfulPanel>
+
+      <ColorfulPanelResizer id="resizer2-level0" />
+
+      <ColorfulPanel color="red" min="10%" id="panel3-level0" className={"items-stretch"} >
+
+        <ColorfulPanelGroup orientation="horizontal" id="gr-level-1" className={"grow flex items-stretch"}>
+
+          <ColorfulPanel color="blue" id="panel1-level1" min="20%" className="grow">
+            C1
+          </ColorfulPanel>
+
+          <ColorfulPanelResizer id="resizer1-level1" />
+
+          <ColorfulPanel color="orange" id="panel2-level1" min="20%" className="grow">
+            C2
+          </ColorfulPanel>
+
+
+        </ColorfulPanelGroup>
+      </ColorfulPanel>
     </ColorfulPanelGroup>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   )
 }

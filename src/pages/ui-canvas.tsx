@@ -9,8 +9,15 @@ import ReactWindowSplitterDemo from '@/components-demo/react-window-splitter'
 import Html5Demo from "@/components-demo/tailwind/html-5-demo";
 import TailwindDemo from "@/components-demo/tailwind";
 
+enum DEMO_TYPES {
+  REACT_WINDOW_SPLITTER = 'react-window-splitter',
+  TAILWIND = 'tailwind',
+  UI_CANVAS = 'ui-canvas',
+  ANTD = 'antd',
+}
+
 export const UiCanvasPage = () => {
-  const [currentDemo, setCurrentDemo] = React.useState('tailwind')
+  const [currentDemo, setCurrentDemo] = React.useState(DEMO_TYPES.REACT_WINDOW_SPLITTER)
 
   return (
       <div className="flex flex-col h-screen">
@@ -34,12 +41,14 @@ export const UiCanvasPage = () => {
           </div>
 
           <div className="flex flex-1 justify-center space-x-8">
-              {currentDemo === 'antd' && <AntdDemos/>}
-              {currentDemo === 'ui-canvas' && <UiCanvasDemos/>}
-              {currentDemo === 'react-window-splitter' && <ReactWindowSplitterDemo/>}
-              {currentDemo === 'tailwind' && <TailwindDemo/>}
 
+            {currentDemo === DEMO_TYPES.REACT_WINDOW_SPLITTER && <ReactWindowSplitterDemo/>}
 
+            {currentDemo === DEMO_TYPES.TAILWIND && <TailwindDemo/>}
+
+            {currentDemo === DEMO_TYPES.UI_CANVAS && <UiCanvasDemos/>}
+
+            {currentDemo === DEMO_TYPES.ANTD && <AntdDemos/>}
 
           </div>
 

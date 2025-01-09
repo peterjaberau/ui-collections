@@ -21,15 +21,13 @@ const ReactWindowSplitterDemo = () => {
   return (
       <>
         <div className="space-y-8 w-screen  ">
-          <div className=" flex justify-center items-center space-x-8  p-8">
-            <Box title="Simple Demo" className="justify-items-start w-1/2">
+          <div className=" flex items-stretch p-8 gap-8">
+
+            <Box title="Simple Demo" className="grow">
               <WindowSplitterSimpleDemo/>
             </Box>
 
-            <Box
-                title="Simple Demo"
-                className=" justify-items-start flex-1 w-1/2"
-            >
+            <Box title="Conditional demo Demo">
               <ReactWindowConditionnalDemo/>
             </Box>
           </div>
@@ -65,10 +63,10 @@ const ReactWindowSplitterDemo = () => {
               <NestedStretchMiddleDemo/>
             </Box>
           </div>
-            <div className="flex w-full p-8 h-screen  ">
-            <Box title= "Html Splitter Demo">
-              <HtmlSplitterDemo/>
-            </Box>
+            <div className="flex w-full p-8   ">
+              <Box title= "Html Splitter Demo">
+                <HtmlSplitterDemo/>
+              </Box>
             </div>
 
 

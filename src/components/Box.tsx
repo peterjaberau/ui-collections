@@ -10,7 +10,7 @@ interface BoxProps {
 export const Box: React.FC<BoxProps> = ({ title, children, className }) => {
 
     return (
-        <div className={cn("p-4 border rounded-lg shadow-md w-full", (className) ?? "")} >
+        <div className={cn("p-4 border rounded-lg shadow-md w-full items-stretch", (className) ?? "")} >
             <h3 className="mb-2 text-lg font-semibold">{title}</h3>
             {children}
         </div>
